@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  tor-polipo-haproxy:
+    image: mattes/rotating-proxy
+    environment:
+      tors: 40
+    ports:
+      - "5566:5566"
+      - "4444:4444"
